@@ -1,0 +1,160 @@
+body{
+	background-color: white;
+	text-align: center;
+	font-family: 'Alata';
+}
+
+.margin {
+	margin: auto;
+}
+
+h1 {
+	font-family: 'Aclonica'
+}
+
+.header {
+	font-family: "Open Sans";
+	/*background: rgb(54, 155, 87); */
+	background: rgb(65, 221, 176);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%
+}
+
+.title {
+	margin-bottom: 0px;
+}
+
+.subtitel {
+	margin-top: 0px;
+	padding-bottom: 20px;
+}
+
+.formular {
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+
+.inhalt, .content {
+	margin-top: 115px;
+	width: 34%;
+	/* background: rgb(54, 200, 87); */
+	background: rgb(142, 227, 186);
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 10px 10px 15px silver;
+}
+
+.content {
+	border: 20px;
+}
+
+.konsole{
+	padding-bottom: 15px;
+}
+
+.footer {
+	background-color: #0b3e40;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+
+#form_input-feld_preset {
+	display: none;
+}
+
+#form_sitzungsort {
+	text-align: right;
+}
+
+.footer_text {
+	margin: 10px;
+	color: white;
+	font-family: "Open Sans Light";
+}
+
+/* Button  */
+
+.konsole {
+  height: 70px;
+	margin: 0 auto;
+//  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  /* stroke: #19f6e8; */
+	stroke: #22ba86;
+}
+
+.text {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 4px;
+  }
+}
+
+.konsole:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+#button_svg {
+	margin-top: 50px;
+}
+/* Checkbox */
+
+/* Schriftarten importieren */
+
+/* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/open-sans-v17-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+       url('../fonts/open-sans-v17-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v17-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v17-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v17-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v17-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* alata-regular - latin */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/alata-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Alata Regular'), local('Alata-Regular'),
+       url('../fonts/alata-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/alata-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/alata-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/alata-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/alata-v1-latin-regular.svg#Alata') format('svg'); /* Legacy iOS */
+}

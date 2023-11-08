@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+			<title>SV-Einladungscreator</title>
+			<meta name="description" content="Programm zum Erstellen von Einladungen für die Schülerinnenvertretung des Leibniz-Gymnasiums">
+			<meta name="author" content="Konstantin Marx">
+			<meta charset="utf-8">
+
+			<link href="design.css" rel="stylesheet">
+			<link rel="icon" type="image/png" href="favicon.png">
+			<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+			<script language="JavaScript" src="script.js"></script>
+			<script type="text/javascript" src="jspdf.min.js"></script>
+	</head>
+	<body>
+		<div class="webseite">
+			<div class="header">
+				<h1 id="title">SV-Einladungscreator</h1>
+				<h3 id="subtitel">Programm zum Erstellen von Einladungen für die Schülerinnenvertretung des Leibniz-Gymnasiums</h3>
+			</div>
+			<div class="inhalt">
+				<div class="formular">
+					<span id="form_sitzungsort">
+						Sitzungsort: <br>
+						Findet die SV-Sitzung nicht in der kleinen Aula statt? <input type="checkbox" onclick="document.getElementById('code_input_place').style.display=this.checked?'block':'none';"> <br>
+						<div id="code_input_place" style="display: none">
+	    				Wo findet die SV-Sitzung statt? <input type="text" class="place_input" id="sitzung_place_input" value="in der kleinen Aula"> <br>
+						</div>
+					</span>
+					<span id="form_sitzungsdatum">
+						Sitzungsdatum:
+						<input type="date" id="date_input_1"> <br>
+					</span>
+					<span id="form_sitzungszeit">
+						Sitzungszeit: <br>
+						In welchem Block findet die SV-Sitzung statt?
+						<select id="time_input">
+							<option value="1">1. Block</option>
+							<option value="2">2. Block</option>
+							<option value="3">3. Block</option>
+							<option value="4">4. Block</option>
+						</select><br>
+					</span>
+					<span id="form_tagesordnung">
+						Tagesordnung: <br>
+						Tagesordnungspunkt hinzufügen <input type="button" value="-" onClick="sub_topic();">
+						<input type="button" value="+" onClick="add_topic();"><br>
+						<div id="dynamic_input"></div>
+					</span>
+					<span id="form_sv-vorstand">
+						Wer ist im SV-Vorstand? <br>
+						<textarea cols="35" rows="3" id="sv-vorstand_input_2">Yukino Takeda
+Hasan Kilic
+Furkan Öztürk
+Johann Dissmann </textarea> <br>
+					</span>
+				</div>
+				<div class="konsole">
+					<!-- <input id="button_create" type="button" value="Einladung erstellen" onclick="javascript:genPDF()"> <br>  -->
+					<svg id="button_svg" height="60" width="320">
+				    <rect class="shape" height="60" width="320" />
+				  </svg>
+				  <div onclick="javascript:genPDF()" class="text">DOWNLOAD</div>
+				</div>
+			</div>
+			<div class="footer">
+				<a class="footer_text" href="manual.html">Anleitung</a>
+				<a class="footer_text" href="about.html">Über das Tool</a>
+			</div>
+			<span id="form_input-feld_preset">
+				<input type="hidden" class="topic_input" id="topic_input_1" placeholder="Tagesordnungspunkt 01" name="topic_input_001" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_2" placeholder="Tagesordnungspunkt 02" name="topic_input_002" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_3" placeholder="Tagesordnungspunkt 03" name="topic_input_003" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_4" placeholder="Tagesordnungspunkt 04" name="topic_input_004" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_5" placeholder="Tagesordnungspunkt 05" name="topic_input_005" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_6" placeholder="Tagesordnungspunkt 06" name="topic_input_006" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_7" placeholder="Tagesordnungspunkt 07" name="topic_input_007" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_8" placeholder="Tagesordnungspunkt 08" name="topic_input_008" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_9" placeholder="Tagesordnungspunkt 09" name="topic_input_009" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_10" placeholder="Tagesordnungspunkt 10" name="topic_input_010" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_11" placeholder="Tagesordnungspunkt 11" name="topic_input_011" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_12" placeholder="Tagesordnungspunkt 12" name="topic_input_012" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_13" placeholder="Tagesordnungspunkt 13" name="topic_input_013" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_14" placeholder="Tagesordnungspunkt 14" name="topic_input_014" value=""> <br>
+				<input type="hidden" class="topic_input" id="topic_input_15" placeholder="Tagesordnungspunkt 15" name="topic_input_015" value=""> <br></span>
+	</body>
+</html>
